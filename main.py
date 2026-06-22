@@ -24,7 +24,7 @@ class BaseVehicle(ABC):
     
     @staticmethod
     def validate_license_plate(plate: str):
-        if (len(plate) != 9 and not plate.startswith("29")):
+        if (len(plate) != 9 or not plate.startswith("29")):
             print("Biển số không hợp lệ")
             return False
         return True
